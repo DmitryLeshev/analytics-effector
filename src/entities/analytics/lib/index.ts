@@ -1,28 +1,5 @@
 let inited = false;
 
-export enum AnalyticType {
-  FORM_SHOW = "search_form_open",
-  CHANGED = "search_changed",
-  BUTTON_CLICKED = "search_button_clicked",
-}
-
-export type TypeFormShow = {
-  name: AnalyticType.FORM_SHOW;
-  payload: {};
-};
-
-export type TypeChanged = {
-  name: AnalyticType.CHANGED;
-  payload: { search: string };
-};
-
-export type TypeButtonClicked = {
-  name: AnalyticType.BUTTON_CLICKED;
-  payload: {};
-};
-
-// export type AnalyticsEvent = TypeFormShow | TypeChanged | TypeButtonClicked;
-
 export type AnalyticsEvent = {
   name: string;
   payload: Record<string, string | number>;

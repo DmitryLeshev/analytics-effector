@@ -6,6 +6,9 @@ import { Layout } from "./layouts";
 
 import "./index.scss";
 
+import { modelAnalytics } from "entities/analytics";
+modelAnalytics.effects.initAnalyticsFx();
+
 const App = () => {
   const isAuth = true;
   const appStatus = true;
